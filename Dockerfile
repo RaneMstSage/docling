@@ -9,6 +9,7 @@ RUN apt-get update \
 # This will install torch with *only* cpu support
 # Remove the --extra-index-url part if you want to install all the gpu requirements
 # For more details in the different torch distribution visit https://pytorch.org/.
+RUN pip install wheel
 RUN pip install --no-cache-dir docling --extra-index-url https://download.pytorch.org/whl/cpu
 
 ENV HF_HOME=/tmp/
